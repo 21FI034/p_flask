@@ -11,10 +11,10 @@
     <input type="submit" value="Create" />
     </form>
 </div> 
-<a href="/create" role="button">CREATE NEW TASK</a>
 {% for task in tasks %} 
  <h2>タイトル : {{ task.title }}</h2> 
  <p>詳細 : {{ task.details }}</p> 
+ <a href="/update/{{ task.id }}" role="button">Update</a> 
  <a href="/delete/{{ task.id }}" role="button">Delete</a> 
 {% endfor %}
 {% endblock %}
